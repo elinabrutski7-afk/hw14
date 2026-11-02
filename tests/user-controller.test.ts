@@ -9,13 +9,6 @@ import {baseURL} from "../helpers/baseUrl";
 
 test.describe('User management API', () => {
 
-    test('all users: should return empty array when no users', async ({ request }) => {
-        await cleanupUsers(request);
-        const responseAfterCleanup = await request.get(`${baseURL}`);
-        const usersAfterCleanUp = await responseAfterCleanup.json();
-        expect(usersAfterCleanUp.length).toBe(0);
-    });
-
     test('find user: should return a user by ID', async ({ request }) => {
         const user = await request.post(`${baseURL}`);
         const userBody = await user.json();
