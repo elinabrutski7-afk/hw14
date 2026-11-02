@@ -1,7 +1,7 @@
 // tests/api.spec.ts
 import {test, expect} from '@playwright/test';
 import type {APIRequestContext} from '@playwright/test';
-import { StatusCodes } from 'http-status-codes'
+import { StatusCodes } from 'http-status-codes';
 import {response} from "express";
 import {base} from "@faker-js/faker";
 import {cleanupUsers} from "../helpers/cleanupUsers";
